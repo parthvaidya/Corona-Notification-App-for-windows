@@ -8,7 +8,7 @@ def notifyMe(title,message):
         title = title,
         message = message,
         app_icon = r"D:\Notification Project\icon.ico",
-        timeout = 30
+        timeout = 20
     )
 
 def getData(url):
