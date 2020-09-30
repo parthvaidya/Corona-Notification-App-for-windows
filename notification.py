@@ -8,14 +8,14 @@ def notifyMe(title,message):
         title = title,
         message = message,
         app_icon = r"D:\Notification Project\icon.ico",
-        timeout = 30
+        timeout = 80
     )
 
 def getData(url):
     r = requests.get(url)
     return r.text
 
-# notifyMe("sagar","Hello")
+notifyMe("sagar","Hello")
 while True:
     myHtmlData = getData("https://www.mohfw.gov.in/")
     data =""
@@ -26,7 +26,7 @@ while True:
 
     states = ['Maharashtra']
     nested_list = []
-    for item in data_list[0:31]:
+    for item in data_list[0:80]:
         final_list = item.split("\n")[1:]
         nested_list.append(final_list)
     temp = data_list[31].split("\n")
